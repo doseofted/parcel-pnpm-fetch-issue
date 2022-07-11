@@ -1,0 +1,17 @@
+{
+  "name": "parcel-arm-install-issue",
+  "version": "0.0.1",
+  "packageManager": "pnpm@7.5.0",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "parcel build",
+    "docker:success": "docker build -t=parcel-install --target=success . && docker run --rm parcel-install",
+    "docker:error": "docker build -t=parcel-install --target=error . && docker run --rm parcel-install"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
